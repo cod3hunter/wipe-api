@@ -19,8 +19,7 @@ router.get('/status', (ctx, next) => {
   next();
 });
 
-router
-  .get('/tasks', getTasks)
+router.get('/tasks', getTasks)
   .get('/tasks/:id', getTasksById)
   .post('/tasks', postTasks)
   .put('/tasks/:id', putTasks)
