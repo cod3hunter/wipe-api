@@ -31,6 +31,6 @@ app.use(router.allowedMethods());
 
 cron.schedule('* 12 * * *', alertSchedule);
 
-app.listen(8080, async () => {
-  await mongoose.connect('mongodb://127.0.0.1:27017/wipe').then(() => console.log('mongodb is up!')).catch((e) => console.error(e));
+app.listen(process.env.PORT, async () => {
+  await mongoose.connect(`${process.env.MONGODB_URI}/${process.env.MONGODB_DATABASE}`).then(() => console.log('mongodb is up!')).catch((e) => console.error(e));
 });
