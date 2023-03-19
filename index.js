@@ -1,3 +1,8 @@
+/* eslint-disable import/first */
+import dotenv from 'dotenv';
+
+dotenv.config();
+
 import Koa from 'koa';
 import Router from '@koa/router';
 import bodyParser from 'koa-bodyparser';
